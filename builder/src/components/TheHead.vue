@@ -27,6 +27,7 @@ export default defineComponent({
 
 <style scoped>
 header{
+    min-width: 1200px;
     width: 100%;
     background-image: url(../assets/Header.png);
     background-size: cover;
