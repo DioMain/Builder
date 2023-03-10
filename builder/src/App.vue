@@ -3,17 +3,20 @@
   ПРОЕКТЫ В РОССИИ" 
   p="стадионы, газопроводы, мосты, дамбы"></TheHead>
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
+  <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TheHead from './components/TheHead.vue';
 import RequestLine from './components/Request.vue';
+import WorkLabel from './components/WorkLabel.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    TheHead
+    TheHead,
+    WorkLabel,
   }
 });
 </script>
