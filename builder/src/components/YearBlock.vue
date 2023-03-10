@@ -1,9 +1,8 @@
 <template>
-    <div class="project_card">
-        <img class="card_image" :src="imageUrl" alt="card image">
-        <div class="card_line"></div>
-        <p class="card_name">{{ name }}</p>
-        <p class="card_description">{{ description }}</p>
+    <div class="year_block">
+        <div class="block_number">{{ number }}</div>
+        <div class="block_text">{{ text }}</div>
+        <div class="block_description">{{ description }}</div>
     </div>
 </template>
 
@@ -13,34 +12,35 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'YearBlock',
   props: {
-    imageUrl: String,
-    name: String,
+    number: String,
+    text: String,
     description: String
   }
 });
 </script>
 
 <style scoped>
-    .project_card{
-        width: 350px;
+    .year_block{
+        width: 190px;
     }
-    .card_line{
-        width: 60px;
-        height: 6px;
-        background-color: #F7654A;
-
-        margin-top: 30px;
-        margin-bottom: 15px;
-    }
-    .card_name{
+    .block_number{
+        font-size: 72px;
         font-family: OswaldMedium;
-        font-size: 24px;
-        color: #404149;
+        color: #F7654A;
+        text-align: center;
     }
 
-    .card_description{
-        font-family: OpenSansRegular;
-        font-size: 16px;
+    .block_text{
+        font-size: 36px;
+        font-family: OswaldMedium;
+        color: #000000;
+        text-align: center;
+    }
+
+    .block_description{
+        font-size: 18px;
+        font-family: OswaldMedium;
         color: #999999;
+        text-align: center;
     }
 </style>
