@@ -1,8 +1,8 @@
 <template>
     <header>
-        <div class="header_content">
+        <div class="wrapper_content">
             <div class="header_menu">
-                <img src="../assets/logo.svg" alt="menu logo">
+                <a href="#"><img src="../assets/logo.svg" alt="menu logo"></a>
                 <div class="menu_burger"></div>
             </div>
             <div class="header_text">
@@ -30,12 +30,8 @@ header{
     width: 100%;
     background-image: url(../assets/Header.png);
     background-size: cover;
-    height: 30vh;
+    height: 50vh;
     color: white;
-}
-.header_content{
-    width: 60%;
-    margin: 0 auto 0 auto;
 }
 .header_menu{
     display: flex;
@@ -49,6 +45,10 @@ header{
 
 .menu_burger{
     background-color: #F7654A;
+    width: 50px;
+    height: 50px;
+
+    align-self: center;
 }
 
 pre, p{
@@ -57,11 +57,12 @@ pre, p{
 
 pre{
     font-size: 64px;
-    font-weight: bolder;
+    font-family: OswaldMedium;
 }
 
 p{
     font-size: 18px;
+    font-family: OswaldRegular;
 }
 
 </style>
