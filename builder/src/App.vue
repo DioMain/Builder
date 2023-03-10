@@ -3,11 +3,21 @@
   ПРОЕКТЫ В РОССИИ" 
   p="стадионы, газопроводы, мосты, дамбы"></TheHead>
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
-  <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
   <YearBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе.
                                    Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. 
                                    Мы очень рады данному еву.">
   </YearBlock>
+  
+  <ContentBlock header="Some text">
+    <div>
+      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+    </div>
+  </ContentBlock>
 </template>
 
 <script lang="ts">
@@ -16,14 +26,16 @@ import TheHead from './components/TheHead.vue';
 import RequestLine from './components/Request.vue';
 import WorkLabel from './components/WorkLabel.vue';
 import YearBlock from './components/YearBlock.vue';
+import ContentBlock from './components/ContentBlock.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     TheHead,
-    WorkLabel,
     RequestLine,
-    YearBlock
+    WorkLabel,
+    YearBlock,
+    ContentBlock
   }
 });
 </script>
