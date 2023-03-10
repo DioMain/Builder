@@ -3,10 +3,6 @@
   ПРОЕКТЫ В РОССИИ" 
   p="стадионы, газопроводы, мосты, дамбы"></TheHead>
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
-  <YearBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе.
-                                   Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. 
-                                   Мы очень рады данному еву.">
-  </YearBlock>
   
   <ContentBlock header="Some text">
     <div>
@@ -18,6 +14,10 @@
       <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
     </div>
   </ContentBlock>
+  <!-- <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе.
+                                   Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. 
+                                   Мы очень рады данному еву.">
+  </ArenaBlock> -->
 </template>
 
 <script lang="ts">
@@ -25,8 +25,8 @@ import { defineComponent } from 'vue';
 import TheHead from './components/TheHead.vue';
 import RequestLine from './components/Request.vue';
 import WorkLabel from './components/WorkLabel.vue';
-import YearBlock from './components/YearBlock.vue';
 import ContentBlock from './components/ContentBlock.vue';
+// import ArenaBlock from './components/ArenaBlock.vue';
 
 export default defineComponent({
   name: 'App',
@@ -34,7 +34,7 @@ export default defineComponent({
     TheHead,
     RequestLine,
     WorkLabel,
-    YearBlock,
+    // ArenaBlock,
     ContentBlock
   }
 });

@@ -11,7 +11,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'YearBlock',
+  name: 'ArenaBlock',
   props: {
     imageUrl: String,
     name: String,
@@ -22,7 +22,9 @@ export default defineComponent({
 
 <style scoped>
     .project_card{
-        width: 350px;
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 20px;
     }
     .card_line{
         width: 60px;
