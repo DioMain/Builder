@@ -5,6 +5,7 @@
   <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
   
+  <!--Вот так нужно заполнят контент-блок-->
   <ContentBlock header="Some text" height="500px" width="900px">
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
