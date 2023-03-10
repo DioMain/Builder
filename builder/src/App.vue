@@ -13,8 +13,7 @@ import RequestLine from './components/Request.vue';
 export default defineComponent({
   name: 'App',
   components: {
-    TheHead,
-    RequestLine
+    TheHead
   }
 });
 </script>

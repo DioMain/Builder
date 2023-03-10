@@ -8,7 +8,8 @@
                 </div>
             </div>
             <div class="request_button">
-                
+                <img src="../assets/buttonIcon.svg">
+                <p>{{ btnText }}</p>
             </div>
         </div>
     </div>
@@ -36,6 +37,28 @@ export default defineComponent({
         width: 100%;
         height: 20vh;
         background-color: #F7654A;
+    }
+
+    .request_button{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+        width: 15%;
+        height: 30%;
+
+    }
+
+    .request_button > p{
+        font-size: 14px;
+        font-family: OswaldMedium;
+        color: black;
+    }
+
+    .request_button > img{
+       display: block;
+       width: 18px;
+       height: 21px;
     }
 
     .wrapper_content{

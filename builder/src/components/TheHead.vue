@@ -3,7 +3,9 @@
         <div class="wrapper_content">
             <div class="header_menu">
                 <a href="#"><img src="../assets/logo.svg" alt="menu logo"></a>
-                <div class="menu_burger"></div>
+                <div class="menu_burger">
+                    <img src="../assets/burgerMenu.svg" alt="">
+                </div>
             </div>
             <div class="header_text">
                 <pre>{{ h1 }}</pre>
@@ -45,6 +47,9 @@ header{
 }
 
 .menu_burger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #F7654A;
     width: 50px;
     height: 50px;
