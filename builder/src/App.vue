@@ -2,6 +2,7 @@
   <TheHead h1="РЕАЛИЗУЕМ КРУПНЕЙШИЕ
   ПРОЕКТЫ В РОССИИ" 
   p="стадионы, газопроводы, мосты, дамбы"></TheHead>
+  <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
   
   <ContentBlock header="Some text">
@@ -26,6 +27,7 @@ import TheHead from './components/TheHead.vue';
 import RequestLine from './components/Request.vue';
 import WorkLabel from './components/WorkLabel.vue';
 import ContentBlock from './components/ContentBlock.vue';
+import YearBlock from './components/YearBlock.vue';
 // import ArenaBlock from './components/ArenaBlock.vue';
 
 export default defineComponent({
@@ -35,6 +37,7 @@ export default defineComponent({
     RequestLine,
     WorkLabel,
     // ArenaBlock,
+    YearBlock,
     ContentBlock
   }
 });
