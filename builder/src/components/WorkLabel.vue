@@ -31,9 +31,12 @@ export default defineComponent({
         font-size: 21px;
 
         float: left;
+        
+        margin-top: 15px;
+        margin-left: 15px;
 
-        width: 350px;
-        height: 250px;
+        width: 275px;
+        height: 200px;
         
         background-color: #F7F7F7;
     }
