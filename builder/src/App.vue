@@ -1,27 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <TheHead h1="РЕАЛИЗУЕМ КРУПНЕЙШИЕ
+  ПРОЕКТЫ В РОССИИ" 
+  p="стадионы, газопроводы, мосты, дамбы"></TheHead>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import TheHead from './components/TheHead.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    TheHead
   }
 });
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
 }
 </style>
