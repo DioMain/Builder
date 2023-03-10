@@ -8,15 +8,13 @@
                                    Мы очень рады данному еву.">
   </YearBlock>
   
-  <ContentBlock header="Some text">
-    <div>
-      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
-      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
-      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
-      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
-      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
-      <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
-    </div>
+  <ContentBlock header="Some text" height="500px" width="900px">
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
   </ContentBlock>
 </template>
 
@@ -80,5 +78,4 @@ export default defineComponent({
   font-style: normal;
   font-weight: normal;
 }
-
 </style>
