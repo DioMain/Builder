@@ -1,5 +1,5 @@
 <template>
-    <div class="workLabel_container">
+    <div class="workLabel_container" >
         <div class="workLabel_icon_container">
             <img class="workLabel_icon" :src="imageUrl"/>
         </div>

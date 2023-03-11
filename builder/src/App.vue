@@ -25,24 +25,37 @@
     <img src="Data/Images/SomeOffice.png"/>
     <img src="Data/Images/SomeOffice.png"/>
   </ContentBlock> 
-  <!-- <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе.
-                                   Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. 
-                                   Мы очень рады данному еву.">
-  </ArenaBlock> -->
+  <ContentBlock height="500px" width="700px" header="ОТВЕТЫ НА ВОПРОСЫ" style="margin-top: 50px;">
+    <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?">
+      <div>
+        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной 
+        "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию 
+        размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+      </div>
+    </DropBox>
+    <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?">
+      <div>
+        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной 
+        "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию 
+        размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+      </div>
+    </DropBox>
+  </ContentBlock>
 
-
-  <!--Зона Кирилла-->
+  
 <OurPartners/>
 
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 import TheHead from './components/TheHead.vue';
 import RequestLine from './components/Request.vue';
 import WorkLabel from './components/WorkLabel.vue';
 import ContentBlock from './components/ContentBlock.vue';
 import YearBlock from './components/YearBlock.vue';
+import DropBox from './components/DropBox.vue';
 // import ArenaBlock from './components/ArenaBlock.vue';
 
 // Kirill
@@ -57,6 +70,7 @@ export default defineComponent({
     // ArenaBlock,
     YearBlock,
     ContentBlock,
+    DropBox,
 
     // Kirill
     OurPartners
