@@ -6,7 +6,7 @@
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
   
   <!--Вот так нужно заполнят контент-блок-->
-  <ContentBlock header="Some text" height="500px" width="900px">
+  <ContentBlock header="Some text" height="500px" width="900px"> <!--Хуйня переделывай циклом P.S. Kirill-->
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
@@ -18,6 +18,11 @@
                                    Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. 
                                    Мы очень рады данному еву.">
   </ArenaBlock> -->
+
+
+  <!--Зона Кирилла-->
+<OurPartners/>
+
 </template>
 
 <script lang="ts">
@@ -29,6 +34,9 @@ import ContentBlock from './components/ContentBlock.vue';
 import YearBlock from './components/YearBlock.vue';
 // import ArenaBlock from './components/ArenaBlock.vue';
 
+// Kirill
+import OurPartners from "./components/OurPartners.vue";
+
 export default defineComponent({
   name: 'App',
   components: {
@@ -37,7 +45,10 @@ export default defineComponent({
     WorkLabel,
     // ArenaBlock,
     YearBlock,
-    ContentBlock
+    ContentBlock,
+
+    // Kirill
+    OurPartners
   }
 });
 </script>
