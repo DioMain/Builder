@@ -1,6 +1,6 @@
 <template>
     <section class="Section_Partners">
-        <h2>Наши партнеры</h2>
+        <h2>Дима лох объелся блох</h2>
     </section>
 </template>
 
