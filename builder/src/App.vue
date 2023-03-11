@@ -15,7 +15,7 @@
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
   </ContentBlock>
 
-  <ContentBlock height="500px">
+  <ContentBlock height="650px">
     <img src="Data/Images/SomeOffice.png"/>
     <img src="Data/Images/SomeOffice.png"/>
     <img src="Data/Images/SomeOffice.png"/>
@@ -24,11 +24,16 @@
     <img src="Data/Images/SomeOffice.png"/>
     <img src="Data/Images/SomeOffice.png"/>
     <img src="Data/Images/SomeOffice.png"/>
-  </ContentBlock>
+  </ContentBlock> 
   <!-- <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе.
                                    Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. 
                                    Мы очень рады данному еву.">
   </ArenaBlock> -->
+
+
+  <!--Зона Кирилла-->
+<OurPartners/>
+
 </template>
 
 <script lang="ts">
@@ -40,6 +45,9 @@ import ContentBlock from './components/ContentBlock.vue';
 import YearBlock from './components/YearBlock.vue';
 // import ArenaBlock from './components/ArenaBlock.vue';
 
+// Kirill
+import OurPartners from "./components/OurPartners.vue";
+
 export default defineComponent({
   name: 'App',
   components: {
@@ -48,7 +56,10 @@ export default defineComponent({
     WorkLabel,
     // ArenaBlock,
     YearBlock,
-    ContentBlock
+    ContentBlock,
+
+    // Kirill
+    OurPartners
   }
 });
 </script>
