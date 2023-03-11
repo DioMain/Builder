@@ -6,13 +6,24 @@
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
   
   <!--Вот так нужно заполнят контент-блок-->
-  <ContentBlock header="Some text" height="500px" width="900px">
-    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
-    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
-    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
-    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
-    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
-    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Some text"/>
+  <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="500px" width="900px">
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
+    <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
+  </ContentBlock>
+
+  <ContentBlock height="500px">
+    <img src="Data/Images/SomeOffice.png"/>
+    <img src="Data/Images/SomeOffice.png"/>
+    <img src="Data/Images/SomeOffice.png"/>
+    <img src="Data/Images/SomeOffice.png"/>
+    <img src="Data/Images/SomeOffice.png"/>
+    <img src="Data/Images/SomeOffice.png"/>
+    <img src="Data/Images/SomeOffice.png"/>
+    <img src="Data/Images/SomeOffice.png"/>
   </ContentBlock>
   <!-- <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе.
                                    Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. 

@@ -45,6 +45,9 @@ export default defineComponent({
         width: auto;
 
         margin-top: 15px;
+
+        margin-left: 25px;
+        margin-right: 25px;
     }
     .workLabel_icon_container{
         width: 60px;

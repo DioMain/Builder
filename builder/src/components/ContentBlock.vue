@@ -17,14 +17,14 @@ export default defineComponent({
         headerColor: String,
         height: String,
         width: String
-    },
+    }, 
     computed: {
         compColor() {
             return this.headerColor == "" ? "Black" : this.headerColor;
         },
         getSize(){
-            return `height: ${this.height};`+
-                   `width: ${this.width};`;
+            return `height: ${this.height == "" ? "auto" : this.height};`+
+                   `width: ${this.width == "" ? "auto" : this.width};`;
         }
     }
 })
@@ -45,5 +45,9 @@ export default defineComponent({
 .contentBlock_slot{
     margin-left: auto;
     margin-right: auto;
+}
+
+.contentBlock_slot > img {
+    width: 25%;
 }
 </style>
