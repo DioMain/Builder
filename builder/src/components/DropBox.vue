@@ -66,7 +66,7 @@ export default defineComponent({
 
     flex-direction: row;
 
-    font-size: 20px;
+    font-size: 16px;
     font-family: "OswaldMedium";
 
     color: #F7654A;

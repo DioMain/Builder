@@ -25,8 +25,8 @@
     <img src="Data/Images/SomeOffice.png"/>
     <img src="Data/Images/SomeOffice.png"/>
   </ContentBlock> 
-  <ContentBlock height="500px" width="700px" header="ОТВЕТЫ НА ВОПРОСЫ" style="margin-top: 50px;">
-    <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?">
+  <ContentBlock height="500px" width="900px" header="ОТВЕТЫ НА ВОПРОСЫ" style="margin-top: 50px;">
+    <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?" style="margin-top: 25px;">
       <div>
         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной 
         "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию 
