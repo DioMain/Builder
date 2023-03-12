@@ -90,6 +90,21 @@
 
   <RequestLine h="ХОТИТЕ С НАМИ РАБОТАТЬ?" p="ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
 
+  <JustefyContentBlock Text ="Контакты">
+    <AnyContact IconUrl="Data/Icons/LocationIcon.svg" ContactName="АДРЕС:" Contact="НЕВСКИЙ ПРОСПЕКТ 140,
+ОФИС 140-142"/>
+
+    <AnyContact IconUrl="Data/Icons/PhoneIcon.svg" ContactName="ТЕЛЕФОН:" 
+    Contact="8 (812) 111-22-33
+8 (812) 111-22-33"/>
+
+    <AnyContact IconUrl="Data/Icons/ClockIcon.svg" ContactName="   ВРЕМЯ РАБОТЫ:   " Contact="ПН-СБ
+10:00-20:00"/>
+
+    <AnyContact IconUrl="Data/Icons/EmailIcon.svg" ContactName="E-MAIL:" Contact="     INFO@VIP.RU     "/>
+  </JustefyContentBlock>
+
+  <TheFooter Campany="© 2019 строительная компания" Slogan="Разработано лучшей студией"/>
 </template>
 
 <script lang="ts">
@@ -106,10 +121,10 @@ import ArenaBlock from './components/ArenaBlock.vue';
 // Kirill
 import OurPartners from "./components/OurPartners.vue";
 import AnyPartner from "./components/AnyPartner.vue";
-
+import AnyContact from "./components/AnyContact.vue";
 import JustefyContentBlock from "./components/JustefyContentBlock.vue";
 import AnyReviews from "./components/AnyReview.vue";
-
+import TheFooter from "./components/TheFooter.vue";
 export default defineComponent({
   name: 'App',
   components: {
@@ -126,7 +141,9 @@ export default defineComponent({
     AnyPartner,
 
     JustefyContentBlock,
-    AnyReviews
+    AnyReviews,
+    AnyContact,
+    TheFooter
   }
 });
 </script>
@@ -139,7 +156,7 @@ export default defineComponent({
 
 .header{
   position: relative;
-  height: 1000px;
+  height: 750px;
 }
 
 .number_block{

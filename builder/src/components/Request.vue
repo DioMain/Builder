@@ -38,7 +38,6 @@ export default defineComponent({
         height: 181px;
         background-color: #F7654A;
 
-        margin: 150px 0 150px 0;
     }
 
     .request_button{
