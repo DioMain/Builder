@@ -42,8 +42,35 @@
     </DropBox>
   </ContentBlock>
 
-  
-<OurPartners/>
+    <!-- ----------Kirill---------- -->
+
+  <OurPartners Text = "Наши партнеры">
+    <AnyPartner imageUrl="Data/Images/AnyPartnerLogo.png" Content="asd" />
+    <AnyPartner imageUrl="Data/Images/AnyPartnerLogo.png" Content="asd" />
+    <AnyPartner imageUrl="Data/Images/AnyPartnerLogo.png" Content="asd" />
+    <AnyPartner imageUrl="Data/Images/AnyPartnerLogo.png" Content="asd" />
+    <AnyPartner imageUrl="Data/Images/AnyPartnerLogo.png" Content="asd" />
+  </OurPartners>
+
+  <CustomerReviews Text ="Отзывы о работе с нами">
+    <AnyReviews Author="Иванов Иван, " Campany="ООО Газпром-Арена">
+      <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
+        Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
+    </AnyReviews>
+    <AnyReviews Author="Иванов Иван, " Campany="ООО Газпром-Арена">
+      <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
+        Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
+    </AnyReviews>
+    <AnyReviews Author="Иванов Иван, " Campany="ООО Газпром-Арена">
+      <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
+        Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
+    </AnyReviews>
+  </CustomerReviews>
+
+  <RequestLine h="ХОТИТЕ С НАМИ РАБОТАТЬ?" p="ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
 
 </template>
 
@@ -60,6 +87,10 @@ import DropBox from './components/DropBox.vue';
 
 // Kirill
 import OurPartners from "./components/OurPartners.vue";
+import AnyPartner from "./components/AnyPartner.vue";
+
+import CustomerReviews from "./components/CustomerReviews.vue";
+import AnyReviews from "./components/AnyReview.vue";
 
 export default defineComponent({
   name: 'App',
@@ -73,7 +104,11 @@ export default defineComponent({
     DropBox,
 
     // Kirill
-    OurPartners
+    OurPartners,
+    AnyPartner,
+
+    CustomerReviews,
+    AnyReviews
   }
 });
 </script>
