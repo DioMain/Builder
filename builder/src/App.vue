@@ -1,10 +1,19 @@
 <template>
-  <TheHead h1="РЕАЛИЗУЕМ КРУПНЕЙШИЕ
-  ПРОЕКТЫ В РОССИИ" 
-  p="стадионы, газопроводы, мосты, дамбы"></TheHead>
-  <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
+  <div class="header">
+    <TheHead h1="РЕАЛИЗУЕМ КРУПНЕЙШИЕ
+    ПРОЕКТЫ В РОССИИ" 
+    p="стадионы, газопроводы, мосты, дамбы"></TheHead>
 
-  <CustomerReviews Text="НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ" >
+    <div class="number_block">
+      <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
+      <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
+      <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
+      <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
+    </div>
+  </div>
+  
+
+  <CustomerReviews Text="НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ" class="fix_color">
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
@@ -13,7 +22,7 @@
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
   
   <!--Вот так нужно заполнят контент-блок-->
-  <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="639px" width="1110px">
+  <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="560px" width="1110px">
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
@@ -23,7 +32,7 @@
   </ContentBlock>
 
 
-  <ContentBlock height="650px">
+  <ContentBlock height="auto">
     <img src="Data/Images/SomeOffice.png"/>
     <img src="Data/Images/SomeOffice.png"/>
     <img src="Data/Images/SomeOffice.png"/>
@@ -34,7 +43,7 @@
     <img src="Data/Images/SomeOffice.png"/>
   </ContentBlock> 
 
-  <ContentBlock height="500px" width="900px" header="ОТВЕТЫ НА ВОПРОСЫ" style="margin-top: 50px;">
+  <ContentBlock height="auto" width="900px" header="ОТВЕТЫ НА ВОПРОСЫ" vertical="true">
     <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?" style="margin-top: 25px;">
       <div>
         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной 
@@ -126,7 +135,25 @@ export default defineComponent({
 * {
   margin: 0;
   padding: 0;
+}
 
+.header{
+  position: relative;
+  height: 1000px;
+}
+
+.number_block{
+    width: 1110px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background-color: #F7F7F7;
+
+    position: absolute;
+    top: 0;
+    margin-top: 490px;
+    left: 290.28px;
 }
 
 .wrapper_content{

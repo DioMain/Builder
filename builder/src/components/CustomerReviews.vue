@@ -15,17 +15,20 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'CustomerReviews',
     props:{
-        Text: String,
+        Text: String
     },
     methods: {
         getContent() {
             return this.Text?.toUpperCase();
-        }
+        },
     }
 })
 </script>
 
 <style>
+    .fix_color{
+        color: #404149;
+    }
     .Section_Reviews{
         padding-top: 100px;
         padding-bottom: 100px;
@@ -39,7 +42,7 @@ export default defineComponent({
         padding-bottom: 60px;
         text-align: center;
         font-family: OswaldRegular;
-        }  
+    }  
     .Section_Section_Reviews_Div{
         max-width: 1110px;
         margin: auto;
@@ -49,7 +52,6 @@ export default defineComponent({
     .Medium_div{
         margin: auto;
         width: 1110px;
-
     }
 
 </style>

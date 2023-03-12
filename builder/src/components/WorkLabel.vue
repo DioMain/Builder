@@ -30,11 +30,6 @@ export default defineComponent({
         font-family: 'OswaldMedium';
         font-size: 21px;
 
-        float: left;
-        
-        margin-top: 15px;
-        margin-left: 15px;
-
         width: 350px;
         height: 250px;
         
