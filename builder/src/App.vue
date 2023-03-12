@@ -2,9 +2,15 @@
   <TheHead h1="РЕАЛИЗУЕМ КРУПНЕЙШИЕ
   ПРОЕКТЫ В РОССИИ" 
   p="стадионы, газопроводы, мосты, дамбы"></TheHead>
-  <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
 
-  <CustomerReviews Text="НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ">
+  <div class="number_block">
+    <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
+    <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
+    <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
+    <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
+  </div>
+
+  <CustomerReviews Text="НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ" Color="#404149">
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
@@ -126,7 +132,16 @@ export default defineComponent({
 * {
   margin: 0;
   padding: 0;
+}
 
+.number_block{
+    width: 1110px;
+    height: 300px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background-color: #F7F7F7;
 }
 
 .wrapper_content{

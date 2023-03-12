@@ -1,7 +1,7 @@
 <template>
     <section class="Section_Reviews">
         <div class="Medium_div">
-            <h2 :color="compColor">{{ getContent() }}</h2>
+            <h2>{{ getContent() }}</h2>
             <div class="Section_Section_Reviews_Div">
                 <slot/>
             </div>
@@ -23,7 +23,7 @@ export default defineComponent({
             return this.Text?.toUpperCase();
         },
         compColor() {
-            return this.Color == "" ? "#000000" : this.Color;
+            return `color: ${this.Color == "" ? "#000000" : this.Color}`;
         },
     }
 })
