@@ -13,11 +13,11 @@
   </div>
   
 
-  <CustomerReviews Text="НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ" class="fix_color">
+  <JustefyContentBlock Text="НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ" class="fix_color">
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
-  </CustomerReviews>
+  </JustefyContentBlock>
 
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
   
@@ -70,7 +70,7 @@
     <AnyPartner imageUrl="Data/Images/AnyPartnerLogo.png" Content="asd" />
   </OurPartners>
 
-  <CustomerReviews Text ="Отзывы о работе с нами">
+  <JustefyContentBlock Text ="Отзывы о работе с нами">
     <AnyReviews Author="Иванов Иван, " Campany="ООО Газпром-Арена">
       <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
         Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
@@ -86,7 +86,7 @@
         Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
         В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
     </AnyReviews>
-  </CustomerReviews>
+  </JustefyContentBlock>
 
   <RequestLine h="ХОТИТЕ С НАМИ РАБОТАТЬ?" p="ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
 
@@ -107,7 +107,7 @@ import ArenaBlock from './components/ArenaBlock.vue';
 import OurPartners from "./components/OurPartners.vue";
 import AnyPartner from "./components/AnyPartner.vue";
 
-import CustomerReviews from "./components/JustefyContentBlock.vue";
+import JustefyContentBlock from "./components/JustefyContentBlock.vue";
 import AnyReviews from "./components/AnyReview.vue";
 
 export default defineComponent({
@@ -125,7 +125,7 @@ export default defineComponent({
     OurPartners,
     AnyPartner,
 
-    CustomerReviews,
+    JustefyContentBlock,
     AnyReviews
   }
 });
