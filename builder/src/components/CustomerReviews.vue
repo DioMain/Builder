@@ -1,7 +1,7 @@
 <template>
     <section class="Section_Reviews">
         <div class="Medium_div">
-            <h2>{{ getContent() }}</h2>
+            <h2 :color="compColor">{{ getContent() }}</h2>
             <div class="Section_Section_Reviews_Div">
                 <slot/>
             </div>
@@ -16,11 +16,15 @@ export default defineComponent({
     name: 'CustomerReviews',
     props:{
         Text: String,
+        Color: String,
     },
     methods: {
         getContent() {
             return this.Text?.toUpperCase();
-        }
+        },
+        compColor() {
+            return this.Color == "" ? "#000000" : this.Color;
+        },
     }
 })
 </script>
@@ -38,7 +42,7 @@ export default defineComponent({
         padding-bottom: 60px;
         text-align: center;
         font-family: OswaldRegular;
-        }  
+    }  
     .Section_Section_Reviews_Div{
         max-width: 1110px;
         margin: auto;
@@ -48,7 +52,6 @@ export default defineComponent({
     .Medium_div{
         margin: auto;
         width: 1110px;
-
     }
 
 </style>
