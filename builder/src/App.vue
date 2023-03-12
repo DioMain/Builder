@@ -3,10 +3,17 @@
   ПРОЕКТЫ В РОССИИ" 
   p="стадионы, газопроводы, мосты, дамбы"></TheHead>
   <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
+
+  <CustomerReviews Text="НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ" >
+    <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
+    <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
+    <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
+  </CustomerReviews>
+
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
   
   <!--Вот так нужно заполнят контент-блок-->
-  <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="500px" width="900px">
+  <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="639px" width="1110px">
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
@@ -14,6 +21,7 @@
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
   </ContentBlock>
+
 
   <ContentBlock height="650px">
     <img src="Data/Images/SomeOffice.png"/>
@@ -25,6 +33,7 @@
     <img src="Data/Images/SomeOffice.png"/>
     <img src="Data/Images/SomeOffice.png"/>
   </ContentBlock> 
+
   <ContentBlock height="500px" width="900px" header="ОТВЕТЫ НА ВОПРОСЫ" style="margin-top: 50px;">
     <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?" style="margin-top: 25px;">
       <div>
@@ -83,7 +92,7 @@ import WorkLabel from './components/WorkLabel.vue';
 import ContentBlock from './components/ContentBlock.vue';
 import YearBlock from './components/YearBlock.vue';
 import DropBox from './components/DropBox.vue';
-// import ArenaBlock from './components/ArenaBlock.vue';
+import ArenaBlock from './components/ArenaBlock.vue';
 
 // Kirill
 import OurPartners from "./components/OurPartners.vue";
@@ -98,7 +107,7 @@ export default defineComponent({
     TheHead,
     RequestLine,
     WorkLabel,
-    // ArenaBlock,
+    ArenaBlock,
     YearBlock,
     ContentBlock,
     DropBox,
@@ -121,7 +130,7 @@ export default defineComponent({
 }
 
 .wrapper_content{
-    width: 60%;
+    width: 1110px;
     height: 100%;
     margin: 0 auto 0 auto;
 }

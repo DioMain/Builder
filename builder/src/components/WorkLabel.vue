@@ -27,7 +27,7 @@ export default defineComponent({
 
 <style>
     .workLabel_container {
-        font-family: 'OswaldBold';
+        font-family: 'OswaldMedium';
         font-size: 21px;
 
         float: left;
@@ -35,19 +35,19 @@ export default defineComponent({
         margin-top: 15px;
         margin-left: 15px;
 
-        width: 275px;
-        height: 200px;
+        width: 350px;
+        height: 250px;
         
         background-color: #F7F7F7;
     }
     .workLabel_content{
         text-align: center;
-        width: auto;
+        width: 172px;
 
         margin-top: 15px;
 
-        margin-left: 25px;
-        margin-right: 25px;
+        margin-right: auto;
+        margin-left: auto;
     }
     .workLabel_icon_container{
         width: 60px;

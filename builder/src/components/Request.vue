@@ -35,7 +35,7 @@ export default defineComponent({
     .request_line{
         min-width: 1200px;
         width: 100%;
-        height: 20vh;
+        height: 181px;
         background-color: #F7654A;
     }
 

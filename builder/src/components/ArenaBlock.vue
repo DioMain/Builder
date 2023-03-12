@@ -22,9 +22,7 @@ export default defineComponent({
 
 <style scoped>
     .project_card{
-        width: 100%;
-        margin-left: 10px;
-        margin-right: 20px;
+        width: 350px;
     }
     .card_line{
         width: 60px;
@@ -44,5 +42,9 @@ export default defineComponent({
         font-family: OpenSansRegular;
         font-size: 16px;
         color: #999999;
+    }
+    
+    .card_image{
+        width: 100%;
     }
 </style>

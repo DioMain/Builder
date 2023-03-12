@@ -37,6 +37,8 @@ export default defineComponent({
     width: 100%;
 }
 .contentBlock_header{
+    padding-bottom: 60px;
+
     font-family: "OswaldBold";
     font-size: 36px;
 
