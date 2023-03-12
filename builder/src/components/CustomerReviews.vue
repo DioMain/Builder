@@ -27,7 +27,8 @@ export default defineComponent({
 
 <style>
     .Section_Reviews{
-        height: 731px;
+        padding-top: 100px;
+        padding-bottom: 100px;
         width: 100%;
         background: white;
         display: flex;
