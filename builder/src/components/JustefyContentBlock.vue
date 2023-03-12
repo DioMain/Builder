@@ -30,8 +30,8 @@ export default defineComponent({
         color: #404149;
     }
     .Section_Reviews{
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: 80px;
+        padding-bottom: 80px;
         width: 100%;
         background: white;
         display: flex;

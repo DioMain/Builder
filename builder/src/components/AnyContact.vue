@@ -2,7 +2,7 @@
     <div class="Contact_Div_img">
         <img :src="IconUrl" alt="Icon">
         <h3>{{ ContactName }}</h3>
-        <pre>{{ Contact }}</pre>
+        <pre :style="h3Style">{{ Contact }}</pre>
     </div>
   </template>
   
@@ -14,8 +14,15 @@
       props:{
         IconUrl: String,
         ContactName: String,
-        Contact: String
+        Contact: String,
+        PColor: String
       },
+      computed: {
+        h3Style() {
+            return `color: ${this.PColor == "" ? "#000000" : this.PColor}`;
+        },
+
+    }
   })
   </script>
   

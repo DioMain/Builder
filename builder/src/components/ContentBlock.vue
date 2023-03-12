@@ -34,13 +34,13 @@ export default defineComponent({
 
 <style>
 .contentBlock{
-    margin-top: 10px;
+    padding-top: 30px;
 
     width: 100%;
 }
 .contentBlock_header{
-    padding-bottom: 60px;
-
+    padding-bottom: 30px;
+    
     font-family: "OswaldBold";
     font-size: 36px;
 

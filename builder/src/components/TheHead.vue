@@ -37,6 +37,8 @@ header{
     color: white;
 }
 .header_menu{
+    padding-top: 30px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

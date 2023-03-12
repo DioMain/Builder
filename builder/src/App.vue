@@ -101,7 +101,7 @@
     <AnyContact IconUrl="Data/Icons/ClockIcon.svg" ContactName="   ВРЕМЯ РАБОТЫ:   " Contact="ПН-СБ
 10:00-20:00"/>
 
-    <AnyContact IconUrl="Data/Icons/EmailIcon.svg" ContactName="E-MAIL:" Contact="     INFO@VIP.RU     "/>
+    <AnyContact IconUrl="Data/Icons/EmailIcon.svg" ContactName="E-MAIL:" Contact="     INFO@VIP.RU     " PColor="#F7654A"/>
   </JustefyContentBlock>
 
   <TheFooter Campany="© 2019 строительная компания" Slogan="Разработано лучшей студией"/>
@@ -170,7 +170,10 @@ export default defineComponent({
     position: absolute;
     top: 0;
     margin-top: 490px;
-    left: 290.28px;
+
+    left: 50%;
+    margin-left: -555px;
+    
 }
 
 .wrapper_content{
