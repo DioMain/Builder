@@ -19,7 +19,7 @@
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
   
   <!--Вот так нужно заполнят контент-блок-->
-  <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="639px" width="1110px">
+  <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="560px" width="1110px">
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
@@ -40,7 +40,7 @@
     <img src="Data/Images/SomeOffice.png"/>
   </ContentBlock> 
 
-  <ContentBlock height="500px" width="900px" header="ОТВЕТЫ НА ВОПРОСЫ" style="margin-top: 50px;" vertical="">
+  <ContentBlock height="auto" width="900px" header="ОТВЕТЫ НА ВОПРОСЫ" vertical="true">
     <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?" style="margin-top: 25px;">
       <div>
         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной 

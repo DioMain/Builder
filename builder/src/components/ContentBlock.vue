@@ -49,6 +49,8 @@ export default defineComponent({
 .contentBlock_slot{
     margin-left: auto;
     margin-right: auto;
+    
+    justify-content: space-between;
 
     display: flex;
     flex-direction: column;
