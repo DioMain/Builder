@@ -34,7 +34,7 @@ export default defineComponent({
         align-items: center;
     }  
     .Section_Reviews h2{
-        font-size: 35px;
+        font-size: 36px;
         padding-bottom: 60px;
         text-align: center;
         font-family: OswaldRegular;
