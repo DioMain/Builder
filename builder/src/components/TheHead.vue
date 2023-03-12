@@ -31,9 +31,9 @@ export default defineComponent({
 header{
     min-width: 1200px;
     width: 100%;
+    height: 640px;
     background-image: url(../assets/Header.png);
     background-size: cover;
-    height: 50vh;
     color: white;
 }
 .header_menu{

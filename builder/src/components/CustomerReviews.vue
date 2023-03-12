@@ -15,21 +15,20 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'CustomerReviews',
     props:{
-        Text: String,
-        Color: String,
+        Text: String
     },
     methods: {
         getContent() {
             return this.Text?.toUpperCase();
-        },
-        compColor() {
-            return `color: ${this.Color == "" ? "#000000" : this.Color}`;
         },
     }
 })
 </script>
 
 <style>
+    .fix_color{
+        color: #404149;
+    }
     .Section_Reviews{
         height: 731px;
         width: 100%;
