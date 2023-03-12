@@ -107,7 +107,7 @@ import ArenaBlock from './components/ArenaBlock.vue';
 import OurPartners from "./components/OurPartners.vue";
 import AnyPartner from "./components/AnyPartner.vue";
 
-import CustomerReviews from "./components/CustomerReviews.vue";
+import CustomerReviews from "./components/JustefyContentBlock.vue";
 import AnyReviews from "./components/AnyReview.vue";
 
 export default defineComponent({
