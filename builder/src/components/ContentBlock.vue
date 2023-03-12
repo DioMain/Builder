@@ -1,7 +1,7 @@
 <template>
     <div class="contentBlock">
-        <h1 class="contentBlock_header" :color="compColor">{{ header }}</h1>
-        <div class="contentBlock_slot" :style="getSize">
+        <h1 class="contentBlock_header" :style="headerStyle">{{ header }}</h1>
+        <div class="contentBlock_slot" :style="getContainerStyle">
             <slot/>
         </div>
     </div>
@@ -16,15 +16,17 @@ export default defineComponent({
         header: String,
         headerColor: String,
         height: String,
-        width: String
+        width: String,
+        vertical: String
     }, 
     computed: {
-        compColor() {
-            return this.headerColor == "" ? "Black" : this.headerColor;
+        headerStyle() {
+            return `color: ${this.headerColor == "" ? "#000000" : this.headerColor}`;
         },
-        getSize(){
+        getContainerStyle(){
             return `height: ${this.height == "" ? "auto" : this.height};`+
-                   `width: ${this.width == "" ? "auto" : this.width};`;
+                   `width: ${this.width == "" ? "auto" : this.width};` +
+                   `flex-direction: ${this.vertical == "true" ? "column" : "row"};`;
         }
     }
 })
@@ -47,8 +49,11 @@ export default defineComponent({
 .contentBlock_slot{
     margin-left: auto;
     margin-right: auto;
-}
 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .contentBlock_slot > img {
     width: 25%;
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="dropBox_container">
-        <div class="dropBox_header_container" >
+        <div class="dropBox_header_container">
             <img class="dropBox_header_img" src="../assets/Arrow.svg" v-on:click="Drop()" :style="imgDropStyle"/>
             <h1 class="dropBox_header">{{ header }}</h1>
         </div>
