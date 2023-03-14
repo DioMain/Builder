@@ -1,16 +1,18 @@
 <template>
     <div class="Slider_div">
-        <button class="Slider_Button">
+        <button class="Slider_Button" @click="PredSlide">
             <img src="../assets/keyboard-left.svg" alt="">
         </button>
         <div class="Whithout_Buttom">
-            <AnyReview 
-            v-for="Item in Items_Array"
-            :key="Item.id"
-            :Item_Data="Item"
-        />
+            <div class="Slider_Button_Div" :style="{'margin-left': '-' + (370 * SlidePosition) + 'px'}">
+                <AnyReview 
+                    v-for="Item in Items_Array"
+                    :key="Item.id"
+                    :Item_Data="Item"
+                />
+            </div>
         </div>
-        <button class="Slider_Button">
+        <button class="Slider_Button" @click="NextSlide">
             <img src="../assets/keyboard-right.svg" alt="">
         </button>
     </div>
@@ -38,7 +40,29 @@ import AnyReview from './AnyReview.vue';
     //     return this.url == undefined ? "" : `mailto:${this.url}`;
     // }
     },
-    components: { AnyReview }
+    components: 
+    {
+         AnyReview 
+    },
+    methods:{
+        PredSlide(){
+            if(this.SlidePosition > 0){
+                this.SlidePosition--;
+                console.log(this.SlidePosition);
+            }
+        },
+        NextSlide(){
+            if(this.SlidePosition < (this.Items_Array.length - 3)){
+                this.SlidePosition++;
+                console.log(this.SlidePosition);
+            }
+        }
+    },
+    data(){
+        return {
+            SlidePosition: 0
+        }
+    }
 })
 </script>
 
@@ -51,6 +75,7 @@ import AnyReview from './AnyReview.vue';
     }
     .Slider_Button img{
         width: 40px;
+        fill: #F7654A;
     }
     .Slider_div{
         margin: auto;
@@ -64,5 +89,11 @@ import AnyReview from './AnyReview.vue';
         display: flex;
         justify-content: space-between;
         overflow: hidden;
+    }
+    .Slider_Button_Div{
+        width: 1110px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
     }
 </style>
