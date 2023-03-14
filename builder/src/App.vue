@@ -22,7 +22,7 @@
   <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
   
   <!--Вот так нужно заполнят контент-блок-->
-  <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="560px" width="1110px">
+  <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="560px" width="1110px" style="margin-top: 30px;">
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
@@ -43,22 +43,38 @@
     <img src="Data/Images/SomeOffice.png"/>
   </ContentBlock> 
 
-  <ContentBlock height="auto" width="900px" header="ОТВЕТЫ НА ВОПРОСЫ" vertical="true">
-    <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?" style="margin-top: 25px;">
-      <div>
+  <div style="margin-top: 30px; margin-bottom: 60px;">
+    <ContentBlock height="auto" width="900px" header="ОТВЕТЫ НА ВОПРОСЫ" vertical="true">
+      <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?">
+        <div>
         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной 
         "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию 
         размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
-      </div>
-    </DropBox>
-    <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?">
-      <div>
+        </div>
+      </DropBox>
+      <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?">
+        <div>
         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной 
         "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию 
         размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
-      </div>
-    </DropBox>
-  </ContentBlock>
+        </div>
+      </DropBox>
+      <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?">
+        <div>
+        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной 
+        "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию 
+        размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+        </div>
+      </DropBox>
+      <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?">
+        <div>
+        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной 
+        "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию 
+        размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+        </div>
+      </DropBox>
+    </ContentBlock>
+  </div>
 
     <!-- ----------Kirill---------- -->
 
@@ -101,7 +117,8 @@
     <AnyContact IconUrl="Data/Icons/ClockIcon.svg" ContactName="   ВРЕМЯ РАБОТЫ:   " Contact="ПН-СБ
 10:00-20:00"/>
 
-    <AnyContact IconUrl="Data/Icons/EmailIcon.svg" ContactName="E-MAIL:" Contact="     INFO@VIP.RU     " PColor="#F7654A"/>
+    <AnyContact IconUrl="Data/Icons/EmailIcon.svg" ContactName="E-MAIL:" Contact="     INFO@VIP.RU     " PColor="#F7654A"
+      isAddress="true" url="INFO@VIP.RU"/>
   </JustefyContentBlock>
 
   <TheFooter Campany="© 2019 строительная компания" Slogan="Разработано лучшей студией"/>

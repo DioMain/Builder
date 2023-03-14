@@ -2,7 +2,12 @@
     <div class="Contact_Div_img">
         <img :src="IconUrl" alt="Icon">
         <h3>{{ ContactName }}</h3>
-        <pre :style="h3Style">{{ Contact }}</pre>
+        <div v-if="isAddress == 'true'">
+            <a :style="h3Style" :href="getUrl">{{ Contact }}</a>
+        </div>
+        <div v-else>
+            <pre :style="h3Style">{{ Contact }}</pre>
+        </div>       
     </div>
   </template>
   
@@ -15,13 +20,17 @@
         IconUrl: String,
         ContactName: String,
         Contact: String,
-        PColor: String
+        PColor: String,
+        isAddress: String,
+        url: String
       },
       computed: {
         h3Style() {
             return `color: ${this.PColor == "" ? "#000000" : this.PColor}`;
         },
-
+        getUrl() {
+            return this.url == undefined ? "" : `mailto:${this.url}`;
+        }
     }
   })
   </script>
@@ -36,7 +45,7 @@
         width: 50px;
         height: 50px;
     }
-    .Contact_Div_img pre{
+    .Contact_Div_img pre, .Contact_Div_img a{
         padding-top: 20px;
         font-family: "OswaldMedium";
     }

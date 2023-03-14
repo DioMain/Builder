@@ -4,7 +4,7 @@
             <img class="dropBox_header_img" src="../assets/Arrow.svg" v-on:click="Drop()" :style="imgDropStyle"/>
             <h1 class="dropBox_header">{{ header }}</h1>
         </div>
-        <div class="dropBox_content_container" :style="containerDropStyle">
+        <div class="dropBox_content_container" v-if="isDroped">
             <slot/>
         </div>
     </div>
@@ -21,23 +21,17 @@ export default defineComponent({
     data(){
         return{
             isDroped: false,
-            containerDropStyle: "",
             imgDropStyle: ""
         }
     },
     methods:{
         Drop() {
-            if (this.isDroped){
-                this.containerDropStyle = "display: flex;";
-                this.imgDropStyle = "transform: rotateZ(90deg);";
-            }               
-            else{
-                this.containerDropStyle = "display: none;";
-                this.imgDropStyle = "transform: rotateZ(0deg);";
-            } 
-                
-
             this.isDroped = !this.isDroped;
+
+            if (this.isDroped)
+                this.imgDropStyle = "transform: rotateZ(90deg);";
+            else
+                this.imgDropStyle = "transform: rotateZ(0deg);";
         }
     }
 })
@@ -72,7 +66,7 @@ export default defineComponent({
     color: #F7654A;
 }
 .dropBox_content_container{
-    display: none;
+    display: flex;
 
     flex-direction: column;
 
