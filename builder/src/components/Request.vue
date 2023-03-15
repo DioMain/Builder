@@ -16,7 +16,6 @@
 </template>
 
 <script lang="ts">
-import { METHOD_TYPES } from '@babel/types';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
