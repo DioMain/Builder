@@ -21,8 +21,6 @@ export default defineComponent({
         // Campany: String
         Item_Data :{
             type: Object,
-            default: () => {}
-
         }
     },
 })
