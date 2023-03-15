@@ -19,7 +19,8 @@
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
   </JustefyContentBlock>
 
-  <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
+  <RequestLine h="САМЫЕ УМНЫЕ ПРОЕКТЫ" p="РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!" btn-text="ВАШ ЗАПРОС"
+  @buttonclick="changeLinkShow"/>
   
   <!--Вот так нужно заполнят контент-блок-->
   <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="560px" width="1110px" style="margin-top: 30px;">
@@ -104,7 +105,8 @@
     </AnyReviews>
   </JustefyContentBlock>
 
-  <RequestLine h="ХОТИТЕ С НАМИ РАБОТАТЬ?" p="ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!" btn-text="ВАШ ЗАПРОС"></RequestLine>
+  <RequestLine h="ХОТИТЕ С НАМИ РАБОТАТЬ?" p="ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!" btn-text="ВАШ ЗАПРОС"
+  @buttonclick="changeLinkShow"/>
 
   <JustefyContentBlock Text ="Контакты">
     <AnyContact IconUrl="Data/Icons/LocationIcon.svg" ContactName="АДРЕС:" Contact="НЕВСКИЙ ПРОСПЕКТ 140,
@@ -122,6 +124,10 @@
   </JustefyContentBlock>
 
   <TheFooter Campany="© 2019 строительная компания" Slogan="Разработано лучшей студией"/>
+
+  <PopupBox Color="#F7654A" :isActive="linkPopupOn == true ? 'true' : 'false'">
+    <div>asdasd</div>
+  </PopupBox>
 </template>
 
 <script lang="ts">
@@ -134,6 +140,7 @@ import ContentBlock from './components/ContentBlock.vue';
 import YearBlock from './components/YearBlock.vue';
 import DropBox from './components/DropBox.vue';
 import ArenaBlock from './components/ArenaBlock.vue';
+import PopupBox from './components/PopupBox.vue';
 
 // Kirill
 import OurPartners from "./components/OurPartners.vue";
@@ -152,6 +159,7 @@ export default defineComponent({
     YearBlock,
     ContentBlock,
     DropBox,
+    PopupBox,
 
     // Kirill
     OurPartners,
@@ -161,6 +169,16 @@ export default defineComponent({
     AnyReviews,
     AnyContact,
     TheFooter
+  },
+  methods:{
+    changeLinkShow() {
+      this.linkPopupOn = !this.linkPopupOn;
+    }
+  },
+  data() {
+    return {
+      linkPopupOn: false,
+    }
   }
 });
 </script>

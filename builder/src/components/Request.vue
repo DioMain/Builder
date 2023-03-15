@@ -7,15 +7,16 @@
                     <p class="small">{{ p }}</p>
                 </div>
             </div>
-            <div class="request_button">
+            <button class="request_button" @click="buttonClick()">
                 <img src="../assets/buttonIcon.svg">
                 <p>{{ btnText }}</p>
-            </div>
+            </button>
         </div>
     </div>
 </template>
 
 <script lang="ts">
+import { METHOD_TYPES } from '@babel/types';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -23,8 +24,13 @@ export default defineComponent({
   props: {
     h: String,
     p: String,
-    btnText: String,
+    btnText: String
   },
+  methods: {
+    buttonClick(){
+        this.$emit('buttonclick');
+    }
+  }
 });
 </script>
 
