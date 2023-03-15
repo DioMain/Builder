@@ -3,10 +3,10 @@
         <div class="Review_Block">
             <img src="../assets/KavichkiIcon.svg" alt="">
             <!-- <slot/> -->
-            <p>{{Item_Data.Text}}</p>
+            <p>{{Item_Data?.Text}}</p>
         </div>  
         <div class="Author">
-            <h3 class="AuthorName">{{ Item_Data.Author }}<span>{{ Item_Data.Campany }}</span></h3>
+            <h3 class="AuthorName">{{ Item_Data?.Author }}<span>{{ Item_Data?.Campany }}</span></h3>
         </div>
   </div>
 </template>
