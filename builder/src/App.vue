@@ -88,7 +88,9 @@
   </OurPartners>
 
   <JustefyContentBlock Text ="Отзывы о работе с нами">
-    <AnyReviews Author="Иванов Иван, " Campany="ООО Газпром-Арена">
+
+    <SliderComponents :Items_Array="SliderItemsReviews"/>
+    <!-- <AnyReviews Author="Иванов Иван, " Campany="ООО Газпром-Арена">
       <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
         Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
         В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
@@ -102,7 +104,7 @@
       <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
         Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
         В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
-    </AnyReviews>
+    </AnyReviews> -->
   </JustefyContentBlock>
 
   <RequestLine h="ХОТИТЕ С НАМИ РАБОТАТЬ?" p="ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!" btn-text="ВАШ ЗАПРОС"
@@ -147,8 +149,10 @@ import OurPartners from "./components/OurPartners.vue";
 import AnyPartner from "./components/AnyPartner.vue";
 import AnyContact from "./components/AnyContact.vue";
 import JustefyContentBlock from "./components/JustefyContentBlock.vue";
-import AnyReviews from "./components/AnyReview.vue";
+//import AnyReviews from "./components/AnyReview.vue";
 import TheFooter from "./components/TheFooter.vue";
+import SliderComponents from "./components/SliderComponent.vue";
+
 export default defineComponent({
   name: 'App',
   components: {
@@ -166,9 +170,10 @@ export default defineComponent({
     AnyPartner,
 
     JustefyContentBlock,
-    AnyReviews,
+    //AnyReviews,
     AnyContact,
-    TheFooter
+    TheFooter,
+    SliderComponents
   },
   methods:{
     changeLinkShow() {
@@ -178,6 +183,28 @@ export default defineComponent({
   data() {
     return {
       linkPopupOn: false,
+
+      SliderItemsReviews: [
+        {Id: 1, Author: " Иванов Иван ", Campany: "ООО Газпром-Арена", Text: `Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
+        Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.`},
+
+        {Id: 2, Author: " Николай Николаевич ", Campany: "ООО Газпром-Арена", Text: `Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
+        Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.`},
+
+        {id: 3, Author: " Андреевна Анна ", Campany: "ООО Газпром-Арена", Text: `Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
+        Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.`},
+
+        {Id: 4, Author: " Петров петя ", Campany: "ООО Газпром-Арена", Text: `Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
+        Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.`},
+
+        {Id: 5, Author: " Кирилл Кириллович ", Campany: "ООО Газпром-Арена", Text: `Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
+        Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.`}
+      ]
     }
   }
 });
