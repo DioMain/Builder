@@ -42,10 +42,11 @@ export default defineComponent({
     display: flex;
 
     flex-direction: column;
+    margin-bottom: 30px;
 }
 .dropBox_header_img{
-    height: 25px;
-    width: 25px;
+    height: 15px;
+    width: 15px;
 
     margin-top: auto;
     margin-bottom: auto;
@@ -60,10 +61,13 @@ export default defineComponent({
 
     flex-direction: row;
 
-    font-size: 16px;
     font-family: "OswaldMedium";
 
     color: #F7654A;
+}
+
+.dropBox_header_container > h1{
+    font-size: 24px;
 }
 .dropBox_content_container{
     display: flex;
@@ -73,8 +77,8 @@ export default defineComponent({
     font-size: 16px;  
     font-family: "OpenSansRegular";
     
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
     color: #999999;
 }
