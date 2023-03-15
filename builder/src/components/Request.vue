@@ -16,7 +16,6 @@
 </template>
 
 <script lang="ts">
-import { METHOD_TYPES } from '@babel/types';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -54,6 +53,7 @@ export default defineComponent({
         width: 15%;
         height: 30%;
 
+        border: none;
     }
 
     .request_button > p{
@@ -66,6 +66,10 @@ export default defineComponent({
        display: block;
        width: 18px;
        height: 21px;
+    }
+
+    .request_button:hover {
+        cursor:pointer;
     }
 
     .wrapper_content{
