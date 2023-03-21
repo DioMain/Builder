@@ -127,8 +127,23 @@
 
   <TheFooter Campany="© 2019 строительная компания" Slogan="Разработано лучшей студией"/>
 
-  <PopupBox Color="#F7654A" :isActive="linkPopupOn == true ? 'true' : 'false'" width="300px">
-    <h1 :class="[inPopup.header]">Tittle</h1>
+  <PopupBox Color="#F7654A" :isActive="linkPopupOn == true ? 'true' : 'false'" width="400px">
+    <div :class="[inPopup.Tittle]">
+      <button :class="[inPopup.Button, inPopup.ReturnButton]" @click="changeLinkShow"><img src="./assets/return.png"/></button>
+      <h1 :class="[inPopup.header1]">ЗАПРОС</h1>
+    </div>
+    <form :class="[inPopup.form]">
+      <h2 :class="[inPopup.header2]">Имя Фимилия</h2>
+      <input type="text" :class="[inPopup.TextArea]" maxlength="45" placeholder="Окулич Дмитрий Юрьевич"/>
+
+      <h2 :class="[inPopup.header2]">Электронная почта</h2>
+      <input type="email" :class="[inPopup.TextArea]" rows="1" maxlength="45" placeholder="example@mail.com"/>
+
+      <h2 :class="[inPopup.header2]">Текст запроса</h2>
+      <textarea type="text" :class="[inPopup.TextArea]" rows="4" maxlength="300"/>
+
+      <button :class="[inPopup.Button, inPopup.ConfirmButton]" @click="changeLinkShow">Подтвердить</button>
+    </form>
   </PopupBox>
 </template>
 
@@ -276,13 +291,71 @@ export default defineComponent({
 
 <!--Style modules for popup-->
 <style module="inPopup">
-  .Button{
+  .Tittle {
+    display: flex;
+
+    margin-top: 15px;
   }
-  .header{
+  .ReturnButton {
+    width: 48px;
+    height: 48px;
+
+    border: solid white 1px;
+    border-radius: 16px;
+
+    justify-self: left;
+
+    margin-left: 15px;
+    margin-right: 80px;
+  }
+  .ReturnButton img {
+    margin-top: 5px;
+
+    width: 30px;
+    height: 30px;
+  }
+  .ConfirmButton {
+    width: 200px;
+    height: 50px;
+
+    margin-left: 80px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .Button{
+    font-family: 'OswaldBold';
+    font-size: 20px;
+
+    background: white;
+
+    border: none;
+
+    cursor: pointer;
+  }
+  .form {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .header1{
     font-family: 'OswaldBold';
     text-align: center;
+    color: white;
   }
-  .TextBox{
+  .header2{
+    font-family: 'OswaldBold';
+    color: white;
+  }
+  .TextArea{
+    width: 360px;
 
+    margin-top: 5px;
+
+    padding: 5px;
+
+    border: solid black 1px;
+
+    font-size: 16px;
+    font-family: 'OswaldMedium';
   }
 </style>
