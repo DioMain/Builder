@@ -127,8 +127,8 @@
 
   <TheFooter Campany="© 2019 строительная компания" Slogan="Разработано лучшей студией"/>
 
-  <PopupBox Color="#F7654A" :isActive="linkPopupOn == true ? 'true' : 'false'">
-    <div>asdasd</div>
+  <PopupBox Color="#F7654A" :isActive="linkPopupOn == true ? 'true' : 'false'" width="300px">
+    <h1 :class="[inPopup.header]">Tittle</h1>
   </PopupBox>
 </template>
 
@@ -210,6 +210,7 @@ export default defineComponent({
 });
 </script>
 
+<!--Common styles-->
 <style>
 * {
   margin: 0;
@@ -271,4 +272,17 @@ export default defineComponent({
   font-style: normal;
   font-weight: normal;
 }
+</style>
+
+<!--Style modules for popup-->
+<style module="inPopup">
+  .Button{
+  }
+  .header{
+    font-family: 'OswaldBold';
+    text-align: center;
+  }
+  .TextBox{
+
+  }
 </style>

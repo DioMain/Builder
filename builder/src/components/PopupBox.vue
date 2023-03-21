@@ -14,12 +14,14 @@ export default defineComponent({
     name: "PopupBox",
     props: {
         Color: String,
-        isActive: String
+        isActive: String,
+        width: String
     },
     computed: {
         getContainerStyle() {
             return `background-color: ${this.Color == undefined ? "white" : this.Color};`+
-                    `border: solid ${this.Color == undefined ? "white" : this.Color} 6px;`;
+                    `border: solid ${this.Color == undefined ? "white" : this.Color} 6px;`+
+                    `width: ${this.width == undefined ? "fit-content" : this.width};`;
         }
     }
 })
@@ -60,8 +62,6 @@ export default defineComponent({
 
     margin-left: auto;
     margin-right: auto;
-
-    width: fit-content;
 
     font-family: "OswaldMedium";
     font-size: 16px;
