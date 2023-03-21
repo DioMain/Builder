@@ -58,7 +58,7 @@ export default defineComponent({
 .PopupBox_container{
     position: relative;
 
-    border-radius: 24px;
+    border-radius: 16px;
 
     margin-left: auto;
     margin-right: auto;
