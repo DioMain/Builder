@@ -4,7 +4,7 @@
             <img src="../assets/keyboard-left.svg" alt="">
         </button>
         <div class="Whithout_Buttom">
-            <div class="Slider_Button_Div" :style="{'margin-left': '-' + (345 * SlidePosition) + 'px'}">
+            <div class="Slider_Button_Div" :class="[Rewiew_Animation.Animation]" :style="{'margin-left': '-' + (345 * SlidePosition) + 'px'}">
                 <AnyReview 
                     v-for="Item in Items_Array"
                     :key="Item.id"
@@ -97,4 +97,11 @@ import AnyReview from './AnyReview.vue';
         display: flex;
         justify-content: space-between;
     }
+</style>
+
+<style module="Rewiew_Animation">
+  .Animation{
+    transition-property: all;
+    transition-duration: 0.3s;
+  }
 </style>
