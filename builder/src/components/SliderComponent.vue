@@ -71,7 +71,8 @@ import AnyReview from './AnyReview.vue';
         height: 40px;
         border: none;
         background: none;   
-        margin-top: -80px;     
+        margin-top: -80px;   
+        cursor: pointer;  
     }
     .Slider_Button img{
         width: 40px;
