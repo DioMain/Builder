@@ -1,10 +1,10 @@
 <template>
     <div class="Slider_div">
-        <button class="Slider_Button" @click="PredSlide">
+        <button class="Slider_Button Left_Button" @click="PredSlide">
             <img src="../assets/keyboard-left.svg" alt="">
         </button>
         <div class="Whithout_Buttom">
-            <div class="Slider_Button_Div" :style="{'margin-left': '-' + (370 * SlidePosition) + 'px'}">
+            <div class="Slider_Button_Div" :class="[Rewiew_Animation.Animation]" :style="{'margin-left': '-' + (345 * SlidePosition) + 'px'}">
                 <AnyReview 
                     v-for="Item in Items_Array"
                     :key="Item.id"
@@ -48,13 +48,13 @@ import AnyReview from './AnyReview.vue';
         PredSlide(){
             if(this.SlidePosition > 0){
                 this.SlidePosition--;
-                console.log(this.SlidePosition);
+                //console.log(this.SlidePosition);
             }
         },
         NextSlide(){
             if(this.SlidePosition < (this.Items_Array.length - 3)){
                 this.SlidePosition++;
-                console.log(this.SlidePosition);
+                //console.log(this.SlidePosition);
             }
         }
     },
@@ -71,20 +71,22 @@ import AnyReview from './AnyReview.vue';
         height: 40px;
         border: none;
         background: none;   
-        margin-top: -80px;     
+        margin-top: -80px;   
+        cursor: pointer;  
     }
     .Slider_Button img{
         width: 40px;
         fill: #F7654A;
     }
     .Slider_div{
+        max-width: 1110px;
         margin: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     .Whithout_Buttom{
-        width: 1110px;
+        width: 1110px; 
         margin: auto;
         display: flex;
         justify-content: space-between;
@@ -96,4 +98,11 @@ import AnyReview from './AnyReview.vue';
         display: flex;
         justify-content: space-between;
     }
+</style>
+
+<style module="Rewiew_Animation">
+  .Animation{
+    transition-property: all;
+    transition-duration: 0.3s;
+  }
 </style>

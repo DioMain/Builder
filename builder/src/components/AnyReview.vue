@@ -28,13 +28,13 @@ export default defineComponent({
 
 <style>
     .AnyReviews_div{
-        min-width: 350px;
+        min-width: 325px;
         margin-right: 10px;
         margin-left: 10px;
     }
     .Review_Block{
         padding: 30px;
-        max-width: 290px;
+        max-width: 265px;
         max-height: 290px;
         background: #F7F7F7;
     }

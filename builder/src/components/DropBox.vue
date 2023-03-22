@@ -1,7 +1,7 @@
 <template>
     <div class="dropBox_container">
-        <div class="dropBox_header_container">
-            <img class="dropBox_header_img" src="../assets/Arrow.svg" v-on:click="Drop()" :style="imgDropStyle"/>
+        <div class="dropBox_header_container" v-on:click="Drop()">
+            <img class="dropBox_header_img" src="../assets/Arrow.svg" :class="{[$style.imgdropStyle]: isDroped}"/>
             <h1 class="dropBox_header">{{ header }}</h1>
         </div>
         <div class="dropBox_content_container" v-if="isDroped">
@@ -20,29 +20,25 @@ export default defineComponent({
     },
     data(){
         return{
-            isDroped: false,
-            imgDropStyle: ""
+            isDroped: false
         }
     },
     methods:{
         Drop() {
             this.isDroped = !this.isDroped;
-
-            if (this.isDroped)
-                this.imgDropStyle = "transform: rotateZ(90deg);";
-            else
-                this.imgDropStyle = "transform: rotateZ(0deg);";
         }
     }
 })
 </script>
 
-<style>
+<style scoped>
 .dropBox_container{
     display: flex;
 
     flex-direction: column;
     margin-bottom: 30px;
+
+    cursor: pointer;
 }
 .dropBox_header_img{
     height: 15px;
@@ -50,8 +46,6 @@ export default defineComponent({
 
     margin-top: auto;
     margin-bottom: auto;
-
-    transform: rotateZ(0deg);
 }
 .dropBox_header{
     margin-left: 15px;
@@ -81,5 +75,11 @@ export default defineComponent({
     margin-bottom: 15px;
 
     color: #999999;
+}
+</style>
+
+<style module>
+.imgdropStyle{
+    transform: rotateZ(90deg);
 }
 </style>
