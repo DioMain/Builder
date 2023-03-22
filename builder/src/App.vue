@@ -2,7 +2,7 @@
   <div class="header">
     <TheHead h1="РЕАЛИЗУЕМ КРУПНЕЙШИЕ
     ПРОЕКТЫ В РОССИИ" 
-    p="стадионы, газопроводы, мосты, дамбы"></TheHead>
+    p="стадионы, газопроводы, мосты, дамбы" show="false"></TheHead>
 
     <div class="number_block">
       <YearBlock number="26" text="ЛЕТ" description="на рынке"></YearBlock>
@@ -13,7 +13,7 @@
   </div>
   
 
-  <JustefyContentBlock Text="НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ" class="fix_color">
+  <JustefyContentBlock Text="НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ" class="fix_color" id="OurProjects">
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
     <ArenaBlock image-url="Data/Images/arena.png" name="Газпром Арена" description="Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для разивтия на следующие десятилетия. Мы очень рады данному еву."></ArenaBlock>
@@ -23,7 +23,7 @@
   @buttonclick="changeLinkShow"/>
   
   <!--Вот так нужно заполнят контент-блок-->
-  <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="560px" width="1110px" style="margin-top: 30px;">
+  <ContentBlock header="ЧЕМ МЫ ЗАНИМАЕМСЯ?" height="560px" width="1110px" style="margin-top: 30px;" id="OurWorks">
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
     <WorkLabel imageUrl="Data/Icons/building.svg" Content="Строительство офисных зданий"/>
@@ -45,7 +45,7 @@
   </ContentBlock> 
 
   <div style="margin-top: 30px; margin-bottom: 60px;">
-    <ContentBlock height="auto" width="900px" header="ОТВЕТЫ НА ВОПРОСЫ" vertical="true">
+    <ContentBlock height="auto" width="900px" header="ОТВЕТЫ НА ВОПРОСЫ" vertical="true" id="Answers">
       <DropBox header="РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?">
         <div>
         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной 
@@ -87,7 +87,7 @@
     <AnyPartner imageUrl="Data/Images/AnyPartnerLogo.png" Content="asd" />
   </OurPartners>
 
-  <JustefyContentBlock Text ="Отзывы о работе с нами">
+  <JustefyContentBlock Text ="Отзывы о работе с нами" id="Reviews">
 
     <SliderComponents :Items_Array="SliderItemsReviews"/>
     <!-- <AnyReviews Author="Иванов Иван, " Campany="ООО Газпром-Арена">
@@ -110,7 +110,7 @@
   <RequestLine h="ХОТИТЕ С НАМИ РАБОТАТЬ?" p="ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!" btn-text="ВАШ ЗАПРОС"
   @buttonclick="changeLinkShow"/>
 
-  <JustefyContentBlock Text ="Контакты">
+  <JustefyContentBlock Text ="Контакты" id="Contacts">
     <AnyContact IconUrl="Data/Icons/LocationIcon.svg" ContactName="АДРЕС:" Contact="НЕВСКИЙ ПРОСПЕКТ 140,
 ОФИС 140-142"/>
 
