@@ -125,7 +125,7 @@
       <input type="email" :class="[inPopup.TextArea]" rows="1" maxlength="45" placeholder="example@mail.com"/>
 
       <h2 :class="[inPopup.header2]">Текст запроса</h2>
-      <textarea type="text" :class="[inPopup.TextArea]" rows="4" maxlength="300"/>
+      <textarea type="text" :class="[inPopup.TextArea1]" rows="4" maxlength="300"/>
 
       <button :class="[inPopup.Button, inPopup.ConfirmButton]" @click="changeLinkShow">Подтвердить</button>
     </form>
@@ -335,6 +335,21 @@ export default defineComponent({
     width: 360px;
 
     margin-top: 5px;
+
+    padding: 5px;
+
+    border: solid black 1px;
+
+    font-size: 16px;
+    font-family: 'OswaldMedium';
+  }
+
+  .TextArea1{
+    width: 360px;
+
+    margin-top: 5px;
+
+    resize: none;
 
     padding: 5px;
 
