@@ -90,6 +90,7 @@
   <JustefyContentBlock Text ="Отзывы о работе с нами" id="Reviews">
 
     <SliderComponents :Items_Array="SliderItemsReviews"/>
+
   </JustefyContentBlock>
 
   <RequestLine h="ХОТИТЕ С НАМИ РАБОТАТЬ?" p="ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!" btn-text="ВАШ ЗАПРОС"
@@ -109,6 +110,8 @@
     <AnyContact IconUrl="Data/Icons/EmailIcon.svg" ContactName="E-MAIL:" Contact="     INFO@VIP.RU     " PColor="#F7654A"
       isAddress="true" url="INFO@VIP.RU"/>
   </JustefyContentBlock>
+
+  
 
   <TheFooter Campany="© 2019 строительная компания" Slogan="Разработано лучшей студией"/>
 

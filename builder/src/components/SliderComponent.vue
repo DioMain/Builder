@@ -32,14 +32,7 @@ import AnyReview from './AnyReview.vue';
         SlideIndex : Number
         
     },
-    computed: {
-    // h3Style() {
-    //     return `color: ${this.PColor == "" ? "#000000" : this.PColor}`;
-    // },
-    // getUrl() {
-    //     return this.url == undefined ? "" : `mailto:${this.url}`;
-    // }
-    },
+
     components: 
     {
          AnyReview 

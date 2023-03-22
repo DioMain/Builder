@@ -6,7 +6,7 @@
                 <div class="menu_burger"  @click="show = !show">
                     <img src="../assets/burgerMenu.svg" alt="">
                 </div>
-                    <nav  class="menu_nav" v-if="show">
+                <nav  class="menu_nav" v-if="show">
                     <ul class="menu_list">
                         <li><a href="#Head" class="menu__item">Главная</a></li>
                         <li><a href="#OurProjects" class="menu__item">Проекты</a></li>
@@ -32,8 +32,7 @@ export default defineComponent({
   name: 'TheHead',
   props: {
     h1: String,
-    p: String,
-    isActive: String
+    p: String
   },
   data() {
         return {
