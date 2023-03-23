@@ -93,6 +93,12 @@
 
   </JustefyContentBlock>
 
+  <div class="reviews_buttons">
+    <div class="wrapper_content">
+      <button @click="showAddElement">Оставить комментарий</button>
+    </div>
+  </div>
+
   <RequestLine h="ХОТИТЕ С НАМИ РАБОТАТЬ?" p="ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!" btn-text="ВАШ ЗАПРОС"
   @buttonclick="changeLinkShow"/>
 
@@ -131,6 +137,24 @@
       <textarea type="text" :class="[inPopup.TextArea1]" rows="4" maxlength="300"/>
 
       <button :class="[inPopup.Button, inPopup.ConfirmButton]" @click="changeLinkShow">Подтвердить</button>
+    </form>
+  </PopupBox>
+  <PopupBox Color="#F7654A" :isActive="addElement == true ? 'true' : 'false'" width="400px">
+    <div :class="[inPopup.Tittle]">
+      <button :class="[inPopup.Button, inPopup.ReturnButton]" @click="showAddElement"><img src="./assets/return.png"/></button>
+      <h1 :class="[inPopup.header1]">Комментарий</h1>
+    </div>
+    <form :class="[inPopup.form]">
+      <h2 :class="[inPopup.header2]">Имя Фимилия</h2>
+      <input type="text" :class="[inPopup.TextArea]" maxlength="45" placeholder="Окулич Дмитрий"/>
+
+      <h2 :class="[inPopup.header2]">Ваша компания</h2>
+      <input type="text" :class="[inPopup.TextArea]" rows="1" maxlength="45" placeholder=" ООО Газпром-Арена"/>
+
+      <h2 :class="[inPopup.header2]">Текст комментария</h2>
+      <textarea type="text" :class="[inPopup.TextArea1]" rows="4" maxlength="300"/>
+
+      <button :class="[inPopup.Button, inPopup.ConfirmButton]" @click="showAddElement">Подтвердить</button>
     </form>
   </PopupBox>
 </template>
@@ -181,11 +205,15 @@ export default defineComponent({
   methods:{
     changeLinkShow() {
       this.linkPopupOn = !this.linkPopupOn;
-    }
+    },
+    showAddElement(){
+      this.addElement = !this.addElement;
+    },
   },
   data() {
     return {
       linkPopupOn: false,
+      addElement: false,
 
       SliderItemsReviews: [
         {Id: 1, Author: " Иванов Иван ", Campany: "ООО Газпром-Арена", Text: `Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
@@ -223,6 +251,23 @@ export default defineComponent({
 .header{
   position: relative;
   height: 750px;
+}
+
+.reviews_buttons > .wrapper_content{
+  display: flex;
+  justify-content: flex-end;
+  height: 150px;
+}
+
+.wrapper_content > button{
+  width: 15%;
+  height: 30%;
+  background-color: #F7654A;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-family: OswaldMedium;
+  cursor: pointer;
 }
 
 .number_block{
