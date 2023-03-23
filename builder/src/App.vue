@@ -149,15 +149,18 @@
     </div>
     <form :class="[inPopup.form]">
       <h2 :class="[inPopup.header2]">Имя Фимилия</h2>
-      <input type="text" :class="[inPopup.TextArea]" maxlength="45" placeholder="Окулич Дмитрий"/>
+      <input type="text" :class="[inPopup.TextArea]" id="addProdName" maxlength="45" placeholder="Окулич Дмитрий"/>
+      <h2 v-if="!addElementValidateValues[0]" :class="[inPopup.headerFail]">Пустое поле</h2>
 
       <h2 :class="[inPopup.header2]">Ваша компания</h2>
-      <input type="text" :class="[inPopup.TextArea]" rows="1" maxlength="45" placeholder=" ООО Газпром-Арена"/>
+      <input type="text" :class="[inPopup.TextArea]" id="addProdCompany" rows="1" maxlength="45" placeholder=" ООО Газпром-Арена"/>
+      <h2 v-if="!addElementValidateValues[1]" :class="[inPopup.headerFail]">Неправильное название компании</h2>
 
       <h2 :class="[inPopup.header2]">Текст комментария</h2>
-      <textarea type="text" :class="[inPopup.TextArea1]" rows="4" maxlength="300"/>
+      <textarea type="text" :class="[inPopup.TextArea1]" id="addProdComment" rows="4" maxlength="300"/>
+      <h2 v-if="!addElementValidateValues[2]" :class="[inPopup.headerFail]">Пустое поле</h2>
 
-      <button :class="[inPopup.Button, inPopup.ConfirmButton]" @click="showAddElement">Подтвердить</button>
+      <button type="button" :class="[inPopup.Button, inPopup.ConfirmButton]" @click="confirmAddElements()">Подтвердить</button>
     </form>
   </PopupBox>
 </template>
@@ -232,12 +235,35 @@ export default defineComponent({
     },
     showAddElement(){
       this.addElement = !this.addElement;
+
+      this.addElementValidateValues[0] = true;
+      this.addElementValidateValues[1] = true;
+      this.addElementValidateValues[2] = true;
     },
+    // Кирил! Это код обработки создания комента.
+    confirmAddElements(){
+        let nameinput : HTMLInputElement = document.getElementById('addProdName') as HTMLInputElement;
+        let companyinput : HTMLInputElement = document.getElementById('addProdCompany') as HTMLInputElement;
+        let textcontent : HTMLTextAreaElement = document.getElementById('addProdComment') as HTMLTextAreaElement;
+
+        // Валидация
+
+        let companyReg = new RegExp("OOO (\\w| |-|\\.)+");
+
+        this.addElementValidateValues[0] = nameinput.value.length != 0;
+        this.addElementValidateValues[1] = companyReg.test(companyinput.value);
+        this.addElementValidateValues[2] = textcontent.value.length != 0;
+
+        // Код создания элемента
+        this.SliderItemsReviews.push({Id: 5, Author: "asdasdasda", Campany: "asd", Text: "asd"});
+        // Тут должен быть твой код Кирил.
+    }
   },
   data() {
     return {
       popupValidateValues: [false, false, false],
       linkPopupOn: false,
+      addElementValidateValues: [false, false, false],
       addElement: false,
 
       SliderItemsReviews: [
