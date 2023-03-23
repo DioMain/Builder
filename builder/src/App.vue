@@ -128,15 +128,18 @@
     </div>
     <form :class="[inPopup.form]">
       <h2 :class="[inPopup.header2]">Имя Фимилия</h2>
-      <input type="text" :class="[inPopup.TextArea]" maxlength="45" placeholder="Окулич Дмитрий Юрьевич"/>
+      <input type="text" :class="[inPopup.TextArea]" id="inputLinkName" maxlength="45" placeholder="Окулич Дмитрий Юрьевич"/>
+      <h2 v-if="!popupValidateValues[0]" :class="[inPopup.headerFail]">Пустое поле</h2>
 
       <h2 :class="[inPopup.header2]">Электронная почта</h2>
-      <input type="email" :class="[inPopup.TextArea]" rows="1" maxlength="45" placeholder="example@mail.com"/>
+      <input type="email" :class="[inPopup.TextArea]" id="inputLinkMail" rows="1" maxlength="45" placeholder="example@mail.com"/>
+      <h2 v-if="!popupValidateValues[1]" :class="[inPopup.headerFail]">Не правильная почта!</h2>
 
       <h2 :class="[inPopup.header2]">Текст запроса</h2>
-      <textarea type="text" :class="[inPopup.TextArea1]" rows="4" maxlength="300"/>
+      <textarea type="text" :class="[inPopup.TextArea1]" id="inputLinkContent" rows="4" maxlength="300"/>
+      <h2 v-if="!popupValidateValues[2]" :class="[inPopup.headerFail]">Пустое поле</h2>
 
-      <button :class="[inPopup.Button, inPopup.ConfirmButton]" @click="changeLinkShow">Подтвердить</button>
+      <button type="button" :class="[inPopup.Button, inPopup.ConfirmButton]" @click="confirmLink">Подтвердить</button>
     </form>
   </PopupBox>
   <PopupBox Color="#F7654A" :isActive="addElement == true ? 'true' : 'false'" width="400px">
@@ -205,6 +208,27 @@ export default defineComponent({
   methods:{
     changeLinkShow() {
       this.linkPopupOn = !this.linkPopupOn;
+
+      this.popupValidateValues[0] = true;
+      this.popupValidateValues[1] = true;
+      this.popupValidateValues[2] = true;
+    },
+    confirmLink(){
+        let nameinput : HTMLInputElement = document.getElementById('inputLinkName') as HTMLInputElement;
+        let mailinput : HTMLInputElement = document.getElementById('inputLinkMail') as HTMLInputElement;
+        let textcontent : HTMLTextAreaElement = document.getElementById('inputLinkContent') as HTMLTextAreaElement;
+
+        this.popupValidateValues[0] = nameinput.value.length != 0;
+        this.popupValidateValues[1] = this.IsRightMail(mailinput.value);
+        this.popupValidateValues[2] = textcontent.value.length != 0;
+
+        if (this.popupValidateValues[0] && this.popupValidateValues[1] && this.popupValidateValues[2])
+          this.changeLinkShow();
+    },
+    IsRightMail(mail: string) : boolean {
+      let reg = new RegExp('\\w+\\.?\\w*@(mail|gmail|email)\\.(com|ru|by|org)');
+
+      return reg.test(mail);
     },
     showAddElement(){
       this.addElement = !this.addElement;
@@ -212,6 +236,7 @@ export default defineComponent({
   },
   data() {
     return {
+      popupValidateValues: [false, false, false],
       linkPopupOn: false,
       addElement: false,
 
@@ -379,6 +404,13 @@ export default defineComponent({
     font-family: 'OswaldBold';
     color: white;
   }
+
+  .headerFail {
+    font-family: 'OswaldBold';
+    color: #DD0000;
+    font-size: 16px;
+  }
+
   .TextArea{
     width: 360px;
 
