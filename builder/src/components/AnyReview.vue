@@ -6,7 +6,7 @@
             <p>{{Item_Data?.Text}}</p>
         </div>  
         <div class="Author">
-            <h3 class="AuthorName">{{ Item_Data?.Author }}<span>{{ Item_Data?.Campany }}</span></h3>
+            <h3 class="AuthorName">{{ Item_Data?.Author }}<br><span>{{ Item_Data?.Campany }}</span></h3>
         </div>
   </div>
 </template>
@@ -17,8 +17,6 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'AnyReview',
     props:{
-        // Author: String,
-        // Campany: String
         Item_Data :{
             type: Object,
         }
@@ -35,7 +33,7 @@ export default defineComponent({
     .Review_Block{
         padding: 30px;
         max-width: 265px;
-        max-height: 290px;
+        height: 290px;
         background: #F7F7F7;
     }
     .Review_Block p{

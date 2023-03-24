@@ -95,7 +95,7 @@
 
   <div class="reviews_buttons">
     <div class="wrapper_content">
-      <button @click="showAddElement">Оставить комментарий</button>
+      <button @click="showAddElement">Оставить отзыв</button>
     </div>
   </div>
 
@@ -240,7 +240,7 @@ export default defineComponent({
       this.addElementValidateValues[1] = true;
       this.addElementValidateValues[2] = true;
     },
-    // Кирил! Это код обработки создания комента.
+    // Кирилл! Это код обработки создания комента.
     confirmAddElements(){
         let nameinput : HTMLInputElement = document.getElementById('addProdName') as HTMLInputElement;
         let companyinput : HTMLInputElement = document.getElementById('addProdCompany') as HTMLInputElement;
@@ -255,8 +255,18 @@ export default defineComponent({
         this.addElementValidateValues[2] = textcontent.value.length != 0;
 
         // Код создания элемента
-        this.SliderItemsReviews.push({Id: 5, Author: "asdasdasda", Campany: "asd", Text: "asd"});
-        // Тут должен быть твой код Кирил.
+        //this.SliderItemsReviews.push({Id: 5, Author: "asdasdasda", Campany: "asd", Text: "asd"});
+        // Тут должен быть твой код Кирилл.
+
+        if (this.addElementValidateValues[0] && this.addElementValidateValues[1] && this.addElementValidateValues[2]){
+          let NamePlusProbel = companyinput.value;
+          NamePlusProbel += " ";
+          this.SliderItemsReviews.push({Id: 5, Author: nameinput.value, Campany: NamePlusProbel, Text: textcontent.value});
+          this.addElement = !this.addElement;
+        }
+        else{
+          alert("Ошибка добавления комментария");
+        }
     }
   },
   data() {
