@@ -6,16 +6,19 @@
                 <div class="menu_burger"  @click="show = !show">
                     <img src="../assets/burgerMenu.svg" alt="">
                 </div>
-                <nav  class="menu_nav" v-if="show">
-                    <ul class="menu_list">
-                        <li><a href="#Head" class="menu__item">Главная</a></li>
-                        <li><a href="#OurProjects" class="menu__item">Проекты</a></li>
-                        <li><a href="#OurWorks" class="menu__item">Наши направления</a></li>
-                        <li><a href="#Answers" class="menu__item">Ответы на вопросы</a></li>
-                        <li><a href="#Reviews" class="menu__item">Отзывы</a></li>
-                        <li><a href="#Contacts" class="menu__item">Контакты</a></li>
-                    </ul>
-                </nav>
+                <Transition name="fade">
+                    <nav  class="menu_nav" v-if="show">
+                        <ul class="menu_list">
+                            <li><a href="#Head" class="menu__item">Главная</a></li>
+                            <li><a href="#OurProjects" class="menu__item">Проекты</a></li>
+                            <li><a href="#OurWorks" class="menu__item">Наши направления</a></li>
+                            <li><a href="#Answers" class="menu__item">Ответы на вопросы</a></li>
+                            <li><a href="#Reviews" class="menu__item">Отзывы</a></li>
+                            <li><a href="#Contacts" class="menu__item">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </Transition>
+                
             </div>
             <div class="header_text">
                 <pre>{{ h1 }}</pre>
@@ -107,6 +110,10 @@ header{
     cursor: pointer;
 }
 
+.menu_burger:active > img{
+    transform: scale(0.9);
+}
+
 pre, p{
     text-align: center;
 }
@@ -119,6 +126,13 @@ pre{
 p{
     font-size: 18px;
     font-family: OswaldRegular;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+    opacity: 0;
 }
 
 </style>

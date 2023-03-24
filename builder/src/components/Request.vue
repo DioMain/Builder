@@ -49,11 +49,35 @@ export default defineComponent({
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: white;
+        background-color: #F7654A;
         width: 15%;
         height: 30%;
 
-        border: none;
+        border: 1px solid black;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .request_button:active{
+        transform: scale(0.99);
+    }
+
+    .request_button:after {
+        background: #fff;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: .2;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+    }
+
+    .request_button:hover:after {
+        left: 120%;
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .request_button > p{

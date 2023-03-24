@@ -95,7 +95,7 @@
 
   <div class="reviews_buttons">
     <div class="wrapper_content">
-      <button @click="showAddElement">Оставить отзыв</button>
+      <button class="rev_button" @click="showAddElement">Оставить отзыв</button>
     </div>
   </div>
 
@@ -139,7 +139,7 @@
       <textarea type="text" :class="[inPopup.TextArea1]" id="inputLinkContent" rows="4" maxlength="300"/>
       <h2 v-if="!popupValidateValues[2]" :class="[inPopup.headerFail]">Пустое поле</h2>
 
-      <button type="button" :class="[inPopup.Button, inPopup.ConfirmButton]" @click="confirmLink">Подтвердить</button>
+      <button type="button" id="conf_button" :class="[inPopup.Button, inPopup.ConfirmButton]" @click="confirmLink">Подтвердить</button>
     </form>
   </PopupBox>
   <PopupBox Color="#F7654A" :isActive="addElement == true ? 'true' : 'false'" width="400px">
@@ -160,7 +160,7 @@
       <textarea type="text" :class="[inPopup.TextArea1]" id="addProdComment" rows="4" maxlength="300"/>
       <h2 v-if="!addElementValidateValues[2]" :class="[inPopup.headerFail]">Пустое поле</h2>
 
-      <button type="button" :class="[inPopup.Button, inPopup.ConfirmButton]" @click="confirmAddElements()">Подтвердить</button>
+      <button type="button" id="conf_button" :class="[inPopup.Button, inPopup.ConfirmButton]" @click="confirmAddElements()">Подтвердить</button>
     </form>
   </PopupBox>
 </template>
@@ -220,13 +220,19 @@ export default defineComponent({
         let nameinput : HTMLInputElement = document.getElementById('inputLinkName') as HTMLInputElement;
         let mailinput : HTMLInputElement = document.getElementById('inputLinkMail') as HTMLInputElement;
         let textcontent : HTMLTextAreaElement = document.getElementById('inputLinkContent') as HTMLTextAreaElement;
+        let confButton : HTMLButtonElement = document.getElementById('conf_button') as HTMLButtonElement;
 
         this.popupValidateValues[0] = nameinput.value.length != 0;
         this.popupValidateValues[1] = this.IsRightMail(mailinput.value);
         this.popupValidateValues[2] = textcontent.value.length != 0;
 
         if (this.popupValidateValues[0] && this.popupValidateValues[1] && this.popupValidateValues[2])
-          this.changeLinkShow();
+        {
+          confButton.style.backgroundColor = "#97E354";
+          confButton.style.transition = "all 0.4s ease-out";
+          setTimeout(this.changeLinkShow, 600);
+        }
+          
     },
     IsRightMail(mail: string) : boolean {
       let reg = new RegExp('\\w+\\.?\\w*@(mail|gmail|email)\\.(com|ru|by|org)');
@@ -245,13 +251,14 @@ export default defineComponent({
         let nameinput : HTMLInputElement = document.getElementById('addProdName') as HTMLInputElement;
         let companyinput : HTMLInputElement = document.getElementById('addProdCompany') as HTMLInputElement;
         let textcontent : HTMLTextAreaElement = document.getElementById('addProdComment') as HTMLTextAreaElement;
+        let confButton : HTMLButtonElement = document.getElementById('conf_button') as HTMLButtonElement;
 
         // Валидация
 
-        let companyReg = new RegExp("OOO (\\w| |-|\\.)+");
+
 
         this.addElementValidateValues[0] = nameinput.value.length != 0;
-        this.addElementValidateValues[1] = companyReg.test(companyinput.value);
+        this.addElementValidateValues[1] = companyinput.value.length != 0;
         this.addElementValidateValues[2] = textcontent.value.length != 0;
 
         // Код создания элемента
@@ -262,10 +269,11 @@ export default defineComponent({
           let NamePlusProbel = companyinput.value;
           NamePlusProbel += " ";
           this.SliderItemsReviews.push({Id: 5, Author: nameinput.value, Campany: NamePlusProbel, Text: textcontent.value});
-          this.addElement = !this.addElement;
-        }
-        else{
-          alert("Ошибка добавления комментария");
+
+          ///
+          confButton.style.backgroundColor = "#97E354";
+          confButton.style.transition = "all 0.4s ease-out";
+          setTimeout(this.changeLinkShow, 600);
         }
     }
   },
@@ -300,6 +308,7 @@ export default defineComponent({
     }
   }
 });
+
 </script>
 
 <!--Common styles-->
@@ -308,6 +317,7 @@ export default defineComponent({
   margin: 0;
   padding: 0;
 }
+
 
 .header{
   position: relative;
@@ -352,6 +362,32 @@ export default defineComponent({
     width: 1110px;
     height: 100%;
     margin: 0 auto 0 auto;
+}
+
+.rev_button{
+  overflow: hidden;
+  position: relative;
+}
+.rev_button:active{
+    transform: scale(0.99);
+}
+
+.rev_button:after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+}
+
+.rev_button:hover:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 @font-face {
@@ -402,12 +438,18 @@ export default defineComponent({
     margin-left: 15px;
     margin-right: 80px;
   }
+
+  .ReturnButton:active > img{
+    transform: scale(0.9);
+  }
   .ReturnButton img {
     margin-top: 5px;
 
     width: 30px;
     height: 30px;
   }
+
+  /* Button animation */
   .ConfirmButton {
     width: 200px;
     height: 50px;
@@ -416,7 +458,14 @@ export default defineComponent({
 
     margin-top: 15px;
     margin-bottom: 15px;
+    cursor: pointer;
   }
+  .ConfirmButton:active{
+    font-size: 18px;
+		transform: scale(0.99);
+  }
+
+  /* End button animation */
   .Button{
     font-family: 'OswaldBold';
     font-size: 20px;
