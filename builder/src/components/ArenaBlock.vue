@@ -36,6 +36,7 @@ export default defineComponent({
         font-family: OswaldMedium;
         font-size: 24px;
         color: #404149;
+
     }
 
     .card_description{
@@ -46,5 +47,8 @@ export default defineComponent({
     
     .card_image{
         width: 100%;
+    }
+    .card_image:hover{
+        transform: scale(1.1);
     }
 </style>

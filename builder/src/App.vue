@@ -235,7 +235,7 @@ export default defineComponent({
           
     },
     IsRightMail(mail: string) : boolean {
-      let reg = new RegExp('\\w+\\.?\\w*@(mail|gmail|email)\\.(com|ru|by|org)');
+      let reg = new RegExp('\\w+\\.?\\w+@(mail|gmail|email)\\.(com|ru|by|org)');
 
       return reg.test(mail);
     },
@@ -273,7 +273,7 @@ export default defineComponent({
           ///
           confButton.style.backgroundColor = "#97E354";
           confButton.style.transition = "all 0.4s ease-out";
-          setTimeout(this.changeLinkShow, 600);
+          setTimeout(this.showAddElement, 600);
         }
     }
   },
